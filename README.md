@@ -1,1 +1,1 @@
-# holbertonschool-low_level_programming
+Thiss is the beginning of C coding. good times learning!
