@@ -1,8 +1,8 @@
 #include <stdio.h>
+/* this is a betty styled this format in c coding */
 /**
- *this is all betty styled wor
- *main - this is a printf funcioned program
- *Return: always void
+ *main - this is a printf script
+ *Return: zero
  */
 int main(void)
 {
