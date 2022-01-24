@@ -1,5 +1,10 @@
 #include <stdio.h>
-/*this is a c program in style..*/
+/*this is a c program in style*/
+
+/**
+ * main - makes use of puts
+ * Return: returns the value of main
+ */
 int main(void)
 /* the function main always returns zero*/
 {
