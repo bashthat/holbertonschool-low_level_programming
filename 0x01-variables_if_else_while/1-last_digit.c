@@ -3,15 +3,28 @@
 #include <stdio.h>
 /* this is a betty styled this format in c coding */
 /**
- *main - this is a printf script
+ *main - this is a RAND_MAX and rand script
  *Return: zero
  */
 int main(void)
 {
-	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	return (0);
+int n, x;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+x = n % 10;
+{
+if (x > 0)
+{
+printf("Last digit of %d is %d and is greater than 5\n", n, x);
+}
+else if (x == 0)
+{
+printf("Last digit of %d is %d and is zero\n", n, x);
+}
+else
+{
+printf("Last digit of %d is %d and is less than 6 and not 0\n", n, x);
+}
+}
+return (0);
 }
