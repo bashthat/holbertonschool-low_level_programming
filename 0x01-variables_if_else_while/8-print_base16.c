@@ -7,7 +7,7 @@ int main(void)
 {
 char i;
 for (i = 0; i < 16; i++)
-printf("%X", i);
+printf("%x", i);
 printf("\n");
 return (0);
 }
