@@ -4,7 +4,7 @@
  *main - this is a printf script
  *Return: zero
  */
-int main(void);
+int main(void)
 {
 putchar('_');
 putchar('p');
