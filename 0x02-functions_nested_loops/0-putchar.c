@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /* this is a betty styled this format in c coding */
 /**
  *main - this is a printf script
