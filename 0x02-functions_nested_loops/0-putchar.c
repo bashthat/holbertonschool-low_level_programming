@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#define MAIN_H
-
 /* this is a betty styled this format in c coding */
 /**
  *main - this is a printf script
