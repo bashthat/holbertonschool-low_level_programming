@@ -1,21 +1,15 @@
-#include <stdio.h>
+#include "main.h" 
 /* this is a betty styled this format in c coding */
 /**
  *main - print_alphabet prototype with putchar
  *Return: zero
+ *ft_print_alphabet - prints alphabet as a prototype
  */
-ft_print_alphabet(void)
+void print_alphabet(void)
 {
-char    letter;
-letter = 'a';
-while (letter <= 'z')
-{
-putchar(letter);
-letter++;
-}
-}
-int main(void)
-{
-ft_print_alphabet();
-return (0);
+int zz = 0;
+for (int zz = 'a'; zz <= 'z'; zz++);
+putchar(zz);
+putchar('\n');
+void print_alphabet;
 }
