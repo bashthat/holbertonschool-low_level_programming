@@ -6,16 +6,18 @@
  *ft_print_alphabet - prints alphabet as a prototype
  *make coding fun.. zz+top.
  */
+
 void print_alphabet(void)
 {
-char zztop;
+char p;
 for
-(zztop = 'a'; zztop <= 'z'; zztop++);
-{
+(p = 'a'; p <= 'z'; p++);
 
-_putchar(zztop);
 
-}
+
+_putchar(p);
+
+
 
 _putchar('\n');
 }
