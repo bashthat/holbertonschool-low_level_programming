@@ -12,8 +12,9 @@ char zztop;
 for
 (zztop = 'a'; zztop <= 'z'; zztop++);
 {
+
 _putchar(zztop);
-zztop++;
+
 }
 
 _putchar('\n');
