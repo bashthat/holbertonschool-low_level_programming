@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *main - this is a program
+ *main - this is a program!
  *Return: always zero
  *_isalpha: code check
  */
