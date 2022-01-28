@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  *main - this is a program!
@@ -12,5 +13,5 @@ if
 ((c >= 'A' && c <= 'Z'));
 return (1);
 else
-return (2);
+return (0);
 }
