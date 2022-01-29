@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *jack_bauer- what time is it?
- *@hours- integer for hours.
+ *@hours-integer for hours.
  *@minutes- integer for minutes
  */
 void jack_bauer(void)
