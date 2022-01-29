@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *jack_bauer - what time is it?
+ *jack_bauer- what time is it?
  *@hours- integer for hours.
  *@minutes- integer for minutes
  */
