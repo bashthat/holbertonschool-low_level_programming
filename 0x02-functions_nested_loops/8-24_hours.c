@@ -13,12 +13,12 @@ while (hours < 24)
 minutes = 0;
 while (minutes < 60)
 {
-putchar((hours / 10) == '0');
-putchar((hours % 10) + '0');
-putchar((':'));
-putchar((minutes / 10) == '0');
-putchar((minutes % 10) == '0');
-putchar('\n');
+_putchar((hours / 10) == '0');
+_putchar((hours % 10) + '0');
+_putchar((':'));
+_putchar((minutes / 10) == '0');
+_putchar((minutes % 10) == '0');
+_putchar('\n');
 }
 minutes++;
 hours++;
