@@ -16,7 +16,7 @@ for (a = 0; a < n; a++)
 for (s = 0; s <= a; s++)
 {
 if (s != 1)
-_putchar(' ');
+_putchar('$');
 if (s == a)
 {
 _putchar('\\');
