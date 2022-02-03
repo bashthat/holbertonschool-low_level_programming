@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * this function prints a string followed by a new line.
- * _strlen: returns the length of a string
+ * _strlen - returns the length of a string
  * @s: Pointer to string
- * Return: always zero (x).
+ * Return: zero(x)the string.
  */
 int _strlen(char *s)
 {
