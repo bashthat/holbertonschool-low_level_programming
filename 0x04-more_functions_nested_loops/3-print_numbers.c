@@ -1,12 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *print_numbers - printst integers 0 through 9
- *@x: first integer
+ *print_numbers - printst integers 0 through 9r
  *_putchar: prints numbers
  */
-
-
 void print_numbers(void)
 {
 	int x;
