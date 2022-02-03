@@ -7,16 +7,17 @@
  */
 void print_array(int *a, int n)
 {
-int z;
+
+int z = 0;
 
 for
-(z = 0; z < n; z++);
+(;
+z < n;
+z++)
 {
-printf("%d", a[z]);
-if (z < n - 1)
-{
+printf("%d", *(a + z));
+if (z != (n - 1))
 printf(", ");
-}
 }
 printf("\n");
 }
