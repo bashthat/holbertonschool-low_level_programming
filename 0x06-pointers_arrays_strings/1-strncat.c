@@ -7,18 +7,22 @@
  * Return: always zero
  */
 char *_strncat(char *dest, char *src, int n)
-
 {
-int y, z, star;
+int x;
+int y;
 
-star = _strlen(dest);
-y = star;
-z = 0;
-while (z < n && src[z] != 0)
+x = 0;
+while (dest[x] != '\0')
 {
-dest[y] = src[z];
-y++;
-z++;
+x++;
 }
+y = 0;
+while (y < n && src[y] != '\0')
+{
+dest[x] = src[y];
+x++;
+y++;
+}
+dest[x] = '\0';
 return (dest);
 }
