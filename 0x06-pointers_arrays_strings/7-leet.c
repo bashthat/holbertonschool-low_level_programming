@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
  * leet - the function of main
- * 
  * Return: always zero
  */
 char *leet(char *v)
