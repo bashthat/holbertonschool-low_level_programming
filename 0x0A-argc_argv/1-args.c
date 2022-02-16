@@ -3,7 +3,7 @@
  * main - prints the name of the program.
  * argc: number of arguments
  * argv: pointer to array of args passed
- * Return: always zero
+ * Return: always null 
  */
 int main (int argc, char **argv)
 {
