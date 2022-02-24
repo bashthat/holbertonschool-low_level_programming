@@ -1,0 +1,1 @@
+in this project, i am going to have the usually collection of source files and header file for prototypes. but specifically the project is geared twoards pointers to functions for a function to perform a task.
