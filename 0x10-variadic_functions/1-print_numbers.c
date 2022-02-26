@@ -4,7 +4,7 @@
 /**
  * print_numbers - printing numbers
  * @n: int constant
- * @seperator: seperator of the numbers printed in the function
+ * @separator: seperator of the numbers printed in the function
  * Return: SUCCESS! in the stdlib.h header. othewise null or void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -18,12 +18,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (y = 0; y < n; y++)
 	{
 		printf("%d", va_arg(numbers, int));
-		if (separator && y < (n -1))
+		if (separator && y < (n - 1))
 		{
 			printf("%s", separator);
 		}
 	}
 	va_end(numbers);
-	
+
 	printf("\n");
 }
