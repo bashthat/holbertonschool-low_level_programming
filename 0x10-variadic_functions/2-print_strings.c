@@ -9,12 +9,27 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-unsigned int y;
-char *string;
+unsigned int y = 0;
+char *str;
 
-va_list list
+va_list argc;
+va_start(argc, n);
 
-return (0);
+while (y < n)
+{
+str = va_arg(argc, char*);
+
+if (str == NULL)
+printf("(nil)");
+else
+printf("%s", str);
+
+if (y < (n - 1) && separator)
+	printf("%s", separator);
+
+	y++;
 }
+printf("\n");
 
-
+va_end(argc);
+}
