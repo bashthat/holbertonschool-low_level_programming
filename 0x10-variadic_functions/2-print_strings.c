@@ -17,6 +17,7 @@ va_start(argc, n);
 
 while (y < n)
 {
+
 str = va_arg(argc, char*);
 
 if (str == NULL)
@@ -25,9 +26,9 @@ else
 printf("%s", str);
 
 if (y < (n - 1) && separator)
-	printf("%s", separator);
+printf("%s", separator);
 
-	y++;
+y++;
 }
 printf("\n");
 
