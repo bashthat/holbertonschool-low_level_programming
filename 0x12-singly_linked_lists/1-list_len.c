@@ -2,20 +2,17 @@
 
 /**
  * list_len - length of list
+ * @h: pointer
  * Return: list
  */
 
-size_t list_len(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
-	const listint_t *tmp = NULL;
-	unsigned int x = 0;
+	size_t x;
 
-	tmp = h;
-
-	while (tmp != NULL)
-	{
-		tmp = tmp->next;
-		x++;
-	}
+	if (h == NULL)
+		return (0);
+	for (x = 0; h != NULL; x++)
+		h = h->next;
 	return (x);
 }
