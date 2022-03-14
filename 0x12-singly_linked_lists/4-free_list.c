@@ -1,15 +1,18 @@
 #include "lists.h"
 /**
- * free_list - free lits
+ * free_list - free list
  * @head: pointer
- * Return: just in time
+ * Return: void
  */
 void free_list(list_t *head)
 {
-if (head == NULL)
-return;
-if (head->next != NULL)
-free_list(head->next);
-free(head->str);
-free(head);
+	list_t *xyz;
+
+	while (head)
+	{
+		xyz = head;
+		head = head->next;
+		free(xyz->str);
+		free(xyz);
+	}
 }
