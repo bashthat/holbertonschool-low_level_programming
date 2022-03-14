@@ -1,37 +1,58 @@
 #include "lists.h"
-#include <string.h>
+
 /**
- * add_node: adds node.
- * @head: pointer of strct
- * @str: *string
- * Return: address of string
+ * _strlen - length of a string.
+ * @str: input string
+ * Return: string length
  */
+int _strlen(const char *str)
+{
+int contador = 0;
+
+	while (str[contador] != '\0')
+	{
+		contador++;
+	}
+return (contador);
+}
+/**
+ * add_node - print len.
+ * @head: list.
+ * @str: string.
+ * Return: The elements
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
-	char *d;
-	int len;
+	list_t *newnode;
 
-	list_t *new
+	newnode = malloc(sizeof(list_t));
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-
-	d = strdup(str);
-	if (d == NULL)
+	if (newnode == NULL)
 	{
-		free(new);
-		return (NULL);
+	free(newnode);
+	return (NULL);
 	}
-
-	for (len = 0; str[len];)
-		len++;
-
-	new->str = d;
-	new->len = len;
-	new->next = *head;
-
-	*head = new;
-
-	return (new);
+	if (str == NULL)
+	{
+	newnode->str = 0;
+	newnode->len = 0;
+	newnode->next = *head;
+	*head = newnode;
+	return (newnode);
+	}
+	else
+	{
+	newnode->str = strdup(str);
+	if (newnode->str == NULL)
+		{
+		free(newnode);
+		return (NULL);
+		}
+	newnode->len = _strlen(str);
+	newnode->next = *head;
+	*head = newnode;
+	return (newnode);
+	}
+	return (NULL);
 }
