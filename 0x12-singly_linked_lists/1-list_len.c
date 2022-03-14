@@ -5,9 +5,9 @@
  * Return: list
  */
 
-size_t list_len(const list_t *h)
+size_t list_len(const listint_t *h)
 {
-	const list_t *tmp = NULL;
+	const listint_t *tmp = NULL;
 	unsigned int x = 0;
 
 	tmp = h;
