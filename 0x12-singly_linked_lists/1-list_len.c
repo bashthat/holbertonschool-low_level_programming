@@ -1,19 +1,19 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * list_len - length of list
- * @h: pointer
- * Return: list
+ * list_len- find a size of linked list
+ * @h: list_t linked list
+ * Return: size_t length of the *h linked list
  */
 
-size_t listint_len(const list_t *h)
+size_t list_len(const list_t *h)
 {
-	size_t elements = 0;
+	if (!h)
+		return (0);
 
-	while (h)
-	{
-		elements++;
-		h = h->next;
-	}
-	return (elements);
+	if (!h->next)
+		return (1);
+
+	return (1 + list_len(h->next));
 }
