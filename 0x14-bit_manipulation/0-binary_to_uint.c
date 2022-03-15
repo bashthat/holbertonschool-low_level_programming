@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * binary_to_unit - convert binary to unsigned list in C
+ * binary_to_uint - convert binary to unsigned list in C
  * @b: pointer to char
  * Return: always zero
  **/
