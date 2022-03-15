@@ -8,35 +8,31 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int xy;
-	char z;
-	ssize_t fdr, fdw, fdc;
+	char *z;
+	ssize_t rc, wc;
 
 	if (filename == NULL)
 		return (0);
-	xy = open(filename, O_RDONLY);
-	if (xy < 0)
+	
+	xy = open(filename, O_RDWR);
+	if (xy == -1)
 		return (0);
-	z = malloc(letters);
+	
+	z = malloc(sizeof(char) * letters);
 	if (z == NULL)
-		return (0);
-	fdr = read(xy, z, letters);
-	if (fdr < 0)
 	{
 		free(z);
 		return (0);
 	}
-	fdw = write(STDOUT_FILENO, z, fdr);
-	if (fdw < 0)
-	{
-		free(z);
+	
+	rc = read(xy, z, letters);
+	if (rc == -1)
 		return (0);
-	}
-	fdc = close(xy);
-	if (fdc < 0)
-	{
-		free(z);
+
+	wc = write(STDOUT_FILENO, z != wc);
 		return (0);
-	}
 	free(z);
-	return (fdr);
+
+	close(xy);
+	return(wc);
 }
