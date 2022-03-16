@@ -7,5 +7,11 @@
  */
 int main(int argc, char **argv)
 {
+	int c, y, z;
+	char buff[1024];
+
+	if (argc != 3)
+	{
+
 	return (0);
 }
