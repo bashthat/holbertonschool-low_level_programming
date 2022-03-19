@@ -9,8 +9,8 @@
 int main(int argc, char *argv[])
 {
 	int fd_f, fd_to, fd_read, close1, close2;
-	char arr[1024], e1[] = "Error: Can't read from file NAME_OF_THE_FILE";
-	char e2[] = "Error: Can't write to NAME_OF_THE_FILE";
+	char arr[1024], e1[] = "Error: Can't read from file";
+	char e2[] = "Error: Can't write to";
 
 	if (argc != 3)
 	{
