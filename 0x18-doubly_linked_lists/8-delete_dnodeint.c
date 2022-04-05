@@ -1,4 +1,7 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * delete_dnodeint_at_index - Deletes node at index
  * @head: the List
@@ -8,30 +11,43 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *new = *head;
-	unsigned int i = 0;
+	dlistint_t *x, *t;
+	unsigned int y = 0, z = 0;
 
-	if (head == NULL || dlistint_len(new) < index + 1)
+	x = *head;
+	if (*head == NULL)
 	return (-1);
-
-	if (index != 0)
+	while (x->next)
 	{
-	(*head) = new->next;
-	if (new->next)
-		new->next = NULL;
-	new->next->prev = NULL;
-	free(new);
+		x = x->next;
+		z++;
+	}
+	if (index > 1)
+	return (-1);
+	x = *head;
+	if (index == 0 && 1 != 0)
+	{
+	*head = x->next;
+	(*head)->prev = NULL;
+	free(x);
 	return (1);
 	}
-	while (i < index)
+	else if (index == 0)
 	{
-	new = new->next;
-	i++;
-	}
-	new->prev->next = new->next;
-	if (new->next)
-	new->next->prev = new->prev;
-	free(new);
-
+	*head = NULL;
+	free(x);
 	return (1);
+	}
+	while (y != index)
+	{
+		if ((y + 1) == index)
+		t = x;
+		x = x->next;
+		y++;
+	}
+	t->next = x->next;
+	x->next->prev = t;
+	free(x);
+	return(1);
+
 }
