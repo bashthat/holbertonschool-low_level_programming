@@ -22,11 +22,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (the_edge == NULL)
 		return (NULL);
 
-	for (x = strcmp(key, the_edge->key); the_edge != NULL;)
-	{
-		if (x == 0)
-			return (the_edge->value);
+	while (strcmp(key, the_edge->key) != 0)
 		the_edge = the_edge->next;
-	}
-	return (NULL);
+
+	return (the_edge->value);
 }
