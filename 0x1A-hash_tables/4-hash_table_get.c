@@ -26,7 +26,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	{
 		if (x == 0)
 			return (the_edge->value);
-		the_edge = the edge->next;
+		the_edge = the_edge->next;
 	}
 
 	return (NULL);
