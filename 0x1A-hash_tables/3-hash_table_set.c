@@ -20,12 +20,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	vim = malloc(sizeof(hash_node_t));
+	
 	if (vim == NULL)
 		return (0);
 
-	indx = key_index((const unsigned char *)key, sz);
 	sz = ht->size;
-
+	indx = key_index((const unsigned char *)key, sz);
 	
 	vim->key = strdup(key);
 	vim->value = strdup(value);
