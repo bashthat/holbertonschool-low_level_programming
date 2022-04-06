@@ -9,12 +9,8 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned int z = 0;
-	hash_node_t *node = NULL;
+	hash_node_t *node;
 
-	for (z = 0; z < ht->size; z++)
-	{
-	while (ht->array[z] != NULL)
-	{
 		node = ht->array[z]->next;
 		free(ht->array[z]->key);
 		free(ht->array[z]->value);
