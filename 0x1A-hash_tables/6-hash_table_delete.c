@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * @hash_table_delete - deletes hash table
+ * hash_table_delete - deletes hash table
  * @ht: hash table
  * Return: NULL
  */
@@ -20,7 +20,6 @@ void hash_table_delete(hash_table_t *ht)
 		node = ht->array[z];
 		if (node != NULL && node->next == NULL)
 		{
-		
 		free(node->key);
 		free(node->value);
 		free(node);
