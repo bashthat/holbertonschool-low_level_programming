@@ -9,11 +9,15 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int filez = 0;
-	unsigned long int place = key_index((unsigned char *)key, filez);
-	hash_node_t *the_edge = ht->array[place];
-	
+	unsigned long int filez;
+	hash_node_t *the_edge = NULL;
 
+	if (!ht || !key)
+	return (NULL);
+	
+	filez = key_index((unsigned char *)key, ht->size);
+	the_edge = ht->array[filez];
+	
 	while (the_edge)
 	{
 		if (strcmp(the_edge->key, key) == 0)
