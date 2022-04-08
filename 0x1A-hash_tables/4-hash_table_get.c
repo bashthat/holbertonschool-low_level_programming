@@ -10,23 +10,17 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int filez = 0;
-	hash_node_t *the_edge = NULL;
-	int x;
+	unsigned long int place = key_index((unsigned char *)key, filez);
+	hash_node_t *the_edge = ht->array[place];
 	
-	if (ht == NULL || key == NULL)
-		return (NULL);
 
-	filez = key_index((const unsigned char *)key, ht->size);
-	the_edge = ht->array[filez];
-
-	if (the_edge == NULL)
-		return (NULL);
-
-	for (x = strcmp(key, the_edge->key); the_edge != NULL;)
+	while (the_edge)
 	{
-		if (x == 0)
+		if (strcmp(the_edge->key, key) == 0)
+		{
 			return (the_edge->value);
-		the_edge = the_edge->next;
+		}
+	the_edge = the_edge->next;
 	}
 
 	return (NULL);
