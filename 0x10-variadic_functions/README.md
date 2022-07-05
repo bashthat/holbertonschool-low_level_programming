@@ -1,0 +1,1 @@
+this is a directory with four problems to prepare any student for the use of the printf function rolling around the corner this comming week! -- way awesome. But the main focus is a varaiadic functioon using <stdrag.h> in the header given there's a main function with an indefinite amount of arguments. exciting. lets code
