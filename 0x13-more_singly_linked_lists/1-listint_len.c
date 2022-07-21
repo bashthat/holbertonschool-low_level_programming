@@ -12,8 +12,7 @@ size_t listint_len(const listint_t *h)
 
 	const listint_t *t;
 	unsigned int counter = 0;
-	
-	t = h;
+  t = h;
 	while (t)
 	{
 		counter++;
