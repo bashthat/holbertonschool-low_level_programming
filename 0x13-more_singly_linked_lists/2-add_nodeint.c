@@ -2,14 +2,15 @@
 
 /**
  * listint_len - list num of ints
- * @h: pointer
  * @n: int
+ * @head: pointer to head node
  * Return: int
+ * add_nodeint - node int
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *x;
-  x = malloc(sizeof(listint_t));
+x = malloc(sizeof(listint_t));
 	if (x == NULL)
 		return (NULL);
 
