@@ -11,4 +11,4 @@ int binary_search(int *array, size_t size, int value);
 
 /* spacing */
 
-#endif /* MAIN_H */
+#endif
