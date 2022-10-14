@@ -1,0 +1,1 @@
+in this project, we as holberton students are asked to use the C programming language to write an algorithmic function for a linear and binary search while utilizing the bigO notation.
