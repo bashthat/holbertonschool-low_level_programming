@@ -1,7 +1,7 @@
 #include "search_algos.h"
 /**
- * binary_search - searches for the value of sorted array 
- * @array: array points to the beginning of the search 
+ * binary_search - searches for the value of sorted array
+ * @array: array points to the beginning of the search
  * @size: the # of elements in the given array.
  * @value: the out resourced value of the array.
  * Return: the value.
@@ -31,4 +31,5 @@ else
 return (m);
 }
 return (-1);
+
 }
