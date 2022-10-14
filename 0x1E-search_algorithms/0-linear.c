@@ -19,4 +19,5 @@ if (array[i] == value)
 return (i);
 }
 return (-1);
+
 }
