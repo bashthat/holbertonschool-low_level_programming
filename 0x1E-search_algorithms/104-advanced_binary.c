@@ -1,10 +1,10 @@
 #include "search_algos.h"
 /**
- * advanced_binary - searches for a value in a sorted array of integers
- * @array: points to the first element of the array
- * @size: number of elements in array
- * @value: value to search
- * Return: index where value is located
+ *advanced_binary - searches for a value in a sorted array of integers
+ *@array: points to the first element of the array
+ *@size: number of elements in array
+ *@value: value to search
+ *Return: index where value is located
 **/
 int advanced_binary(int *array, size_t size, int value)
 {
