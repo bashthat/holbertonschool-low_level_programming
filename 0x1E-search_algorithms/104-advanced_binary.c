@@ -19,4 +19,14 @@ int advanced_binary(int *array, size_t size, int value)
         if (i < size - 1)
             printf(", ");
     }
+    if (size == 1 && array[0] != value)
+        return (-1);
+    if (array[mid] == value)
+        return (mid);
+    if (array[mid] > value)
+        return (advanced_binary(array, mid, value));
+    if (array[mid] < value)
+        return (advanced_binary(array + mid, size - mid, value));
+    return (-1);
+    
 }
