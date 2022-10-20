@@ -8,25 +8,53 @@
 **/
 int advanced_binary(int *array, size_t size, int value)
 {
-size_t i, mid = size / 2;
- if (array == NULL)
-        return (-1);
-    printf("Searching in array: ");
-    for (i = 0; i < size; i++)
+    size_t xyz = 0;
+    size_t i = 0;
+    int zyx = 0;
+    int index = 0;
 
-    {
-        printf("%d", array[i]);
-        if (i < size - 1)
-            printf(", \n");
-    }
+    if (array == NULL)
+        return (-1);
     if (size == 1 && array[0] != value)
         return (-1);
-    if (array[mid] == value)
-        return (mid);
-    if (array[mid] > value)
-        return (advanced_binary(array, mid, value));
-    if (array[mid] < value)
-        return (advanced_binary(array + mid, size - mid, value));
-    return (-1);
-
+    xyz = size / 2;
+    if (array[xyz] == value)
+    {
+        if (array[xyz - 1] == value)
+        {
+            for (i = xyz; i > 0; i--)
+            {
+                if (array[i] != value)
+                    return (i + 1);
+            }
+        }
+        return (xyz);
+    }
+    if (array[xyz] > value)
+    {
+        printf("Searching in array: ");
+        for (i = 0; i < xyz; i++)
+        {
+            printf("%d, ", array[i]);
+        }
+        printf("Found %d at index: %d\n", array[xyz], (int)xyz);
+        zyx = advanced_binary(array, xyz, value);
+        if (zyx == -1)
+            return (-1);
+        index = zyx;
+    }
+    else
+    {
+        printf("Searching in array: ");
+        for (i = xyz; i < size; i++)
+        {
+            printf("%d, ", array[i]);
+        }
+        printf("Found %d at index: %d\n", array[xyz], (int)xyz);
+        zyx = advanced_binary(array + xyz, size - xyz, value);
+        if (zyx == -1)
+            return (-1);
+        index = zyx + xyz;
+    }
+    return (index);
 }
