@@ -14,6 +14,7 @@ int advanced_binary(int *array, size_t size, int value)
 	int zyx = 0;
 	int index;
 	if (array == NULL)
+
 		return (-1);
 	printf("Searching in array: ");
 	for (xyz = 0; xyz < size; xyz++)
