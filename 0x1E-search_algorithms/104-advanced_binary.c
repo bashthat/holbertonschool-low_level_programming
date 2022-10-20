@@ -19,5 +19,4 @@ int advanced_binary(int *array, size_t size, int value)
         if (i < size - 1)
             printf(", ");
     }
-    printf("\n");
 }
