@@ -12,17 +12,18 @@ int advanced_binary(int *array, size_t size, int value)
 
     if (array == NULL)
         return (-1);
-    printf("Searching in array: ");
+    printf("Searching in array: \n");
     for (i = 0; i < size; i++)
     {
         printf("%d", array[i]);
         if (i < size - 1)
             printf(", ");
     }
+    printf("Found at index: \n");
     if (size == 1 && array[0] != value)
         return (-1);
     if (array[mid] >= value)
-        return (advanced_binary(array, mid + 1, value));
+        return (advanced_binary(array, mid, value));
     else
-        return (advanced_binary(array + mid + 1, size - mid - 1, value) + mid + 1);
+        return (advanced_binary(array + mid, size - mid, value));
 }
