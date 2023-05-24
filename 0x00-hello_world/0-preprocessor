@@ -1,2 +1,3 @@
 #!/bin/bash
 gcc -E $CFILE -o c
+# this is a stupid bash script that workS~!
